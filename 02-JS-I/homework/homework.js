@@ -139,25 +139,25 @@ function elevarAlCubo(num) {
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return math.pow (num, exponent);
+  return Math.pow (num, exponent);
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return math.round(num);
+  return Math.round(num);
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return math.ceil(num);
+  return Math.ceil(num);
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return math.random ();
+  return Math.random ();
 }
 
 function esPositivo(numero) {
@@ -228,9 +228,9 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
- if (str.length (letra)>1){
+ if (str.length(letra)>1){
    return "Dato incorrecto";
- } else if ((letra==='a') || (letra==='e')|| (letra==='i') || (letra==='o') || (letra==='u')) {
+ } else if ((letra==='a') || (letra==='e') || (letra==='i') || (letra==='o') || (letra==='u')) {
    return "Es vocal"
   }
 return "Dato incorrecto";
