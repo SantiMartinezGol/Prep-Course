@@ -66,7 +66,7 @@ function colors(color) {
   switch (color) {
     case 'blue':
      return "This is blue";
-      break;
+      //break;
     case 'red': 
      return 'This is red';
       break;
@@ -76,8 +76,8 @@ function colors(color) {
     case 'orange':
      return 'This is orange';
       break;
-      default: 'Color not found';
   }
+      return 'Color not found';
 }
 
 function esDiezOCinco(numero) {
