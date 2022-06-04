@@ -1,0 +1,20 @@
+           h1 {
+                color:firebrick;
+            }
+            img{
+                width: 300px;
+            }
+
+            #thirdDiv {
+                height: 500px;
+                width: 600px;
+                background-color: rgb(216, 64, 64);
+                padding: 50px;
+                border: 10px solid black;
+
+                }
+            #spanID{
+                font-size: 18px;
+                margin: 50px;
+            }
+        
