@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { calculateExtensionPriority } = require("@11ty/eleventy/src/TemplateData");
+
 function crearGato (nombre, edad) {
   // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
   // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
@@ -37,7 +39,7 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-var producto = numeroMisterioso *5 ;
+var producto = objetoMisterioso.numeroMisterioso *5 ;
 return producto;
 }
 
@@ -78,7 +80,8 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
- if (objeto[propiedad] === objeto[key]) {
+ if (objeto[propiedad]) {
+   return true
  }
  return false;
 }
@@ -128,8 +131,14 @@ function sumarLikesDeUsuario (usuario) {
   // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
+  
   // Tu código:
-
+  
+var suma = 0;
+for(var i=0; i<usuario.posts.length; i++){
+suma = suma + usuario.posts[i].likes;
+}
+return suma
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -142,7 +151,13 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  
+ 
+  producto.calcularPrecioDescuento = function() {
+      descuento = this.precio * this.porcentajeDeDescuento;
+      return this.precio - descuento;
+    }
+  return producto;
 }
 
 // No modificar nada debajo de esta línea

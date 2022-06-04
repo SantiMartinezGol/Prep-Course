@@ -9,9 +9,9 @@
                 height: 500px;
                 width: 600px;
                 background-color: rgb(216, 64, 64);
-                padding: 50px;
+                padding: 10px;
                 border: 10px solid black;
-
+                margin: 20px;
                 }
             #spanID{
                 font-size: 18px;
